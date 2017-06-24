@@ -2,9 +2,10 @@
 <html>
   <head>
     <title>API Weather</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/fonts.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="apiScript.js"></script>
+    <script type="text/javascript" src="./JavaScript/apiScript.js"></script>
   </head>
 <body>
   
@@ -12,13 +13,29 @@
     <input id="zipInput" type="text" value="" placeholder="US ZIP Code" />
     <button >Submit</button>
   </form>
-  
-  <div class="place"></div>
-  <div class="temparature">
-      <div class="tempFahr"></div>
-      <div class="tempCelc"></div>
-  </div>
-  <div class="wind"></div>
-  <div class="text"></div>
+  	
+	<div class="weatherContainer">
+		<div class="weatherBox">
+			<div class="currentWeather">
+				<div class="place"></div>
+				<div class="temparature">
+					<div class="tempFahr"></div>
+					<div class="tempCelc"></div>
+				</div>
+				<div class="wind"></div>
+				<div class="text"></div>
+			</div>
+			<div class="forecastedWeather">
+				<ul class="forecastList">
+					<li class="foreDay">Tomorrow</li>
+					<li class="foreDay">2</li>
+					<li class="foreDay">3</li>
+					<li class="foreDay">4</li>
+					<li class="foreDay">5</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>

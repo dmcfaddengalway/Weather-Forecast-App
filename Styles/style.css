@@ -1,0 +1,63 @@
+html, body {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+  font-family: "OstrichSans";
+	background-color: black;
+}
+
+.weatherContainer {
+	width: 100%;
+}
+
+.weatherBox {
+	width: 70%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.currentWeather {
+	width: 50%;
+	background-color: aqua;
+}
+
+.forecastedWeather {
+	width: 50%;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+.forecastList {
+	list-style: none;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-family:  "OstrichSans";
+}
+
+.place {
+	text-align: center;
+}
+
+.tempFahr, .tempCelc {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.wind {
+	font-family: "OstrichSans";
+	text-align: center;
+	font-size: 1.25em;
+	font-style: italic;
+}
+
+.text {
+	height: 25%;
+	font-family: "OstrichSans";
+	text-align: center;
+	font-size: 1.25em;
+	font-style: italic;
+}
