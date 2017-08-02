@@ -5,15 +5,39 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <script>
-    $(document).ready(function() {
-      var apiKey  = 'http://api.apixu.com/v1/current.json?key=915de969c95b481981e233903172106&q=18976';
-      
-      $.getJSON(apiKey, function(data) {
-        console.log(data.location.lon);         
+      $(document).ready(function() {
+          var apiKey = 'http://api.apixu.com/v1/current.json?key=915de969c95b481981e233903172106&q=18976';
+
+          $.getJSON(apiKey, function(data) {
+              console.log(data.location.lon);
+              console.log(data.location.name);
+              console.log(data.location.region);
+              console.log(data.location.country);
+              console.log(data.current.temp_c);
+              console.log(data.current.temp_f);
+              console.log(data.current.condition.text);
+              var town = data.location.name;
+              var region = data.location.region;
+              var country = data.location.country;
+              var tempCelc = data.current.temp_c;
+              var tempFahr = data.current.temp_f;
+              var condition = data.current.condition.text;
+
+              var currentTown = document.getElementById("currentTown");
+              currentTown.innerHTML = town + " " + region + ", " + country;
+          });
       });
-    });
   </script>
 <body>
-  <h1>Weather</h1>
+    <h1>Weather</h1>
+
+    <div class="weatherBox">
+        <div class="currentWeather">
+            <h1 id="currentTown"></h1>
+        </div>
+        <div class="futureWeather">
+
+        </div>
+    </div>
 </body>
 </html>
