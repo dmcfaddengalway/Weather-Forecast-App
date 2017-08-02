@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "OstrichSans";
+  src: url(../assets/fonts/ostrich-sans/ostrich-regular.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OstrichSansLight";
+  src: url(../assets/fonts/ostrich-sans/OstrichSans-Light.otf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OstrichSansMedium";
+  src: url(../assets/fonts/ostrich-sans/OstrichSans-Medium.otf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OstrichSansDashedMedium";
+  src: url(../assets/fonts/ostrich-sans/OstrichSansDashed-Medium.otf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OstrichSansRounded";
+  src: url(../assets/fonts/ostrich-sans/OstrichSansRounded-Medium.otf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OstrichSansBold";
+  src: url(../assets/fonts/ostrich-sans/OstrichSans-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OstrichSansBlack";
+  src: url(../assets/fonts/ostrich-sans/OstrichSans-Black.otf);
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OstrichSansHeavy";
+  src: url(../assets/fonts/ostrich-sans/OstrichSans-Heavy.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
