@@ -19,12 +19,21 @@
               var town = data.location.name;
               var region = data.location.region;
               var country = data.location.country;
-              var tempCelc = data.current.temp_c;
-              var tempFahr = data.current.temp_f;
+              var currentTempCelc = data.current.temp_c;
+              var currentTempFahr = data.current.temp_f;
               var condition = data.current.condition.text;
 
               var currentTown = document.getElementById("currentTown");
               currentTown.innerHTML = town + " " + region + ", " + country;
+
+              var tempFahr = document.getElementById("tempFahr");
+              tempFahr.innerHTML = currentTempFahr;
+
+              var tempCelc = document.getElementById("tempCelc");
+              tempCelc.innerHTML = currentTempCelc;
+
+              var description = document.getElementById("description");
+              description.innerHTML = condition;
           });
       });
   </script>
@@ -34,6 +43,9 @@
     <div class="weatherBox">
         <div class="currentWeather">
             <h1 id="currentTown"></h1>
+            <h3 id="tempFahr"></h3>
+            <h3 id="tempCelc"></h3>
+            <h4 id="description"></h4>
         </div>
         <div class="futureWeather">
 
