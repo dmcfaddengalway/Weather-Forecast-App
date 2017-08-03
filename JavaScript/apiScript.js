@@ -20,14 +20,40 @@ $(document).ready(function() {
         var windMPH = data.current.wind_mph;
         var windDir = data.current.wind_dir;
         var weatherIconCode = data.current.condition.code;
+
         var forecastDayData = data.forecast.forecastday;
         var days = forecastDayData.map(function(x) {
             return x.day;
         });
 
+        console.log(days);
+
         var maxTempC = days.map(function(x) {
             return x.maxtemp_c;
-        })
+        });
+
+        var minTempC = days.map(function(x) {
+            return x.mintemp_c;
+        });
+
+        var maxTempF = days.map(function(x) {
+            return x.maxtemp_f;
+        });
+
+        var minTempF = days.map(function(x) {
+            return x.mintemp_f;
+        });
+
+        function forecastData() {
+            $('.forecastList img').each(function(i) {
+                $(this).attr('src', days[i].condition.code);
+            });
+
+            $('.forecastDayOne').each(function(i) {
+               $(this).html((minTempC[i]) + " - " + (maxTempC));
+            });
+
+        }
 
         console.log(name);
         console.log(region);
