@@ -61,3 +61,20 @@ body {
 	font-size: 1.25em;
 	font-style: italic;
 }
+
+input {
+    height: 48px;
+    width: 250px;
+    border: 2ps solid gray;
+    border-radius: 2px;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+.submitButton {
+    border: none;
+    width: 200px;
+    height: 48px;
+    background-color: red;
+    color: white;
+}
