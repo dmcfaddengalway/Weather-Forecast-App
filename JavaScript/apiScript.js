@@ -45,27 +45,34 @@ $(document).ready(function() {
         });
 
         function forecastData() {
-            $('.forecastList img').each(function(i) {
-                $(this).attr('src', days[i].condition.code);
+
+            var daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+                                'Friday', 'Saturday', 'Sunday'];
+            var today = new Date();
+            var dayID = today.getDay();
+
+            //Loop through an insert weather icons
+            $('.forecastIcon').each(function(i) {
+                $(this).attr('src', days[i].condition.icon);
             });
 
-            $('.forecastDayOne').each(function(i) {
+            //Loop through and insert future days of the week
+            $('.forecastDayNumber').each(function(i, el) {
+                $(el).html(daysOfTheWeek, [(dayID + i) % 7]);
+            });
+
+            //Loop through and insert Low - High temperature of the day
+            $('.forecastDayHighsAndLows').each(function(i) {
                $(this).html((minTempC[i]) + " - " + (maxTempC));
             });
 
         }
 
-        console.log(name);
-        console.log(region);
-        console.log(country);
-        console.log(tempCelc);
-        console.log(tempFahr);
-        console.log(weatherIconCode);
-        console.log(forecastDayData);
-
         $('.place').html("<h1>" + name + " " + region + ", " + country + "</h1>");
         $('.tempFahr').html("<h2>" + tempFahr + "(F) | " + tempCelc + "(C)</h2>");
         $('.text').html("<h3>" + weatherText + "</h3>");
         $('.wind').html("<h3>" + windMPH + "mph " + windDir + "<h3>");
+
+        forecastData();
     });
 });
