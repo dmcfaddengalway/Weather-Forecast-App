@@ -48,21 +48,30 @@ body {
 
 .forecastIcon {
     width: 10%;
-    height: 50%;
+    height: 100%;
     margin: 0px;
     padding: 0px;
+    display: inline;
+    vertical-align: middle;
 }
 
 .forecastDayNumber {
-    width: 50%;
+    width: 60%;
+    height: 100%;
     margin: 0px;
     padding: 0px;
+    display: inline-block;
+    text-align: center;
 }
 
 .forecastDayHighsAndLows {
     width: 25%;
+    height: 100%;
     margin: 0px;
     padding: 0px;
+    display: inline-block;
+    font-size: 24px;
+    text-align: center;
 }
 
 .place {
