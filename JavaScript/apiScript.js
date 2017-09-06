@@ -6,7 +6,7 @@ $(document).ready(function() {
       console.log(zipCode);
     });
 
-    $.getJSON("http://ipinfo.io", function(i) {
+    $.getJSON("http://cors.io/?u=http://ipinfo.io", function(i) {
         var location = i.loc.split(",");
 
         var apiLink = "http://api.apixu.com/v1/forecast.json?key=";
