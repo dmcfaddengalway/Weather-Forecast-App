@@ -6,12 +6,13 @@ $(document).ready(function() {
       console.log(zipCode);
     });
 
-    $.getJSON("http://ipinfo.io", function(i) {
-        var location = i.loc.split(",");
+    $.getJSON("http://ip-api.com/json", function(i) {
+        var lat = i.lat;
+        var long = i.lon;
 
         var apiLink = "http://api.apixu.com/v1/forecast.json?key=";
         var fiveDays = "&days=5";
-        var api = apiLink + apiKeyNum + location[0] + ',' + location[1] + fiveDays;
+        var api = apiLink + apiKeyNum + long + ',' + lat + fiveDays;
 
         $.getJSON(api, function(data) {
             var name = data.location.name;
@@ -48,6 +49,7 @@ $(document).ready(function() {
             });
 
             function forecastDays() {
+
                 var daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
                                     'Friday', 'Saturday', 'Sunday'];
                 var today = new Date();

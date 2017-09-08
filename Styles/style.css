@@ -52,13 +52,15 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    display: inline;
+    display: block;
     float: left;
     vertical-align: middle;
 }
 
 .forecastIcon {
+    width: 50%;
     margin: 0 auto;
+    display: block;
 }
 
 .forecastDayNumber {
@@ -68,6 +70,7 @@ body {
     padding: 0px;
     display: inline-block;
     text-align: center;
+    line-height: 50px;
 }
 
 .forecastDayHighsAndLows {
@@ -79,6 +82,7 @@ body {
     float: right;
     font-size: 24px;
     text-align: center;
+    line-height: 50px;
 }
 
 .place {
