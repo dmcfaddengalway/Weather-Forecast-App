@@ -6,10 +6,10 @@ $(document).ready(function() {
       console.log(zipCode);
     });
 
-    $.getJSON(" http://cors.io/?u=http://ipinfo.io", function(i) {
+    $.getJSON("http://ipinfo.io", function(i) {
         var location = i.loc.split(",");
 
-        var apiLink = " http://cors.io/?u=http://api.apixu.com/v1/forecast.json?key=";
+        var apiLink = "http://api.apixu.com/v1/forecast.json?key=";
         var fiveDays = "&days=5";
         var api = apiLink + apiKeyNum + location[0] + ',' + location[1] + fiveDays;
 
