@@ -77,13 +77,15 @@ window.onload = function() {
                 var background = document.getElementById("pallette");
 
                 //Tests if the function was called
-                //console.log("determineBackground() was called");
+                console.log("determineBackground() was called");
 
                 console.log(dayDescribe);
                 console.log(dayDescribeCode);
 
                 if (dayDescribeCode === 1003) {
                     background.style.backgroundColor = 'red';
+                } else if (dayDescribeCode === 1000) {
+                    background.style.backgroundColor = 'blue';
                 }
             };
 
@@ -94,7 +96,8 @@ window.onload = function() {
 
             forecastDays();
 
-            determineBackground();
+            window.addEventListener("DOMContentLoaded", determineBackground);
+            //determineBackground();
         });
     });
 };
