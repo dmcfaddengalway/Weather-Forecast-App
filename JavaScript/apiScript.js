@@ -29,7 +29,8 @@ $(document).ready(function() {
                 return x.day;
             });
 
-            console.log(days);
+            //Reutsn Objects of weather details for the next days
+            //console.log(days);
 
             var maxTempC = days.map(function(x) {
                 return x.maxtemp_c;
@@ -70,12 +71,30 @@ $(document).ready(function() {
 
             };
 
+            function determineBackground() {
+                var dayDescribe = data.current.condition.text;
+                var dayDescribeCode = data.current.condition.code;
+                var background = document.getElementById("pallette");
+
+                console.log(dayDescribe);
+                console.log(dayDescribeCode);
+
+                if (dayDescribeCode === 1003) {
+                    background.style.backgroundColor = 'red';
+                }
+            };
+
             $('.place').html("<h1>" + name + " " + region + ", " + country + "</h1>");
             $('.tempFahr').html("<h2>" + tempFahr + "(F) | " + tempCelc + "(C)</h2>");
             $('.text').html("<h3>" + weatherText + "</h3>");
             $('.wind').html("<h3>" + windMPH + "mph " + windDir + "<h3>");
 
             forecastDays();
+
+            window.onload = function() {
+                console.log("called");
+                determineBackground();
+            }
         });
     });
 });
