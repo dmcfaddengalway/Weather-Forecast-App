@@ -1,3 +1,5 @@
+'use strict';
+
 window.onload = function() {
     var apiKeyNum = "a79b350f005b4306b1313540170308&q=";
 
@@ -30,7 +32,7 @@ window.onload = function() {
             });
 
             //Reutsn Objects of weather details for the next days
-            //console.log(days);
+            console.log(days);
 
             var maxTempC = days.map(function(x) {
                 return x.maxtemp_c;
@@ -69,12 +71,13 @@ window.onload = function() {
                     $(this).attr('src', days[i].condition.icon);
                 });
 
+                determineBackground();
             };
 
             function determineBackground() {
                 var dayDescribe = data.current.condition.text;
                 var dayDescribeCode = data.current.condition.code;
-                var background = document.getElementById("pallette");
+                var bkg = $("#pallette");
 
                 //Tests if the function was called
                 console.log("determineBackground() was called");
@@ -83,9 +86,9 @@ window.onload = function() {
                 console.log(dayDescribeCode);
 
                 if (dayDescribeCode === 1003) {
-                    background.style.backgroundColor = 'red';
+                    bkg.css('background-color', 'red');
                 } else if (dayDescribeCode === 1000) {
-                    background.style.backgroundColor = 'blue';
+                    bkg.css('background-color', 'blue');
                 }
             };
 
@@ -95,9 +98,6 @@ window.onload = function() {
             $('.wind').html("<h3>" + windMPH + "mph " + windDir + "<h3>");
 
             forecastDays();
-
-            window.addEventListener("DOMContentLoaded", determineBackground);
-            //determineBackground();
         });
     });
 };

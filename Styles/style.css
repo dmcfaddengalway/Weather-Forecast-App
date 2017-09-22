@@ -6,7 +6,11 @@ html, body {
 
 body {
     font-family: "OstrichSans";
-    background-color: black;
+}
+
+#pallette {
+    width: 100bh;
+    height: 100vh;
 }
 
 .weatherContainer {
