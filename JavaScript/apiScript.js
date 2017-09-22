@@ -1,4 +1,4 @@
-$(document).ready(function() {
+window.onload = function() {
     var apiKeyNum = "a79b350f005b4306b1313540170308&q=";
 
     $('button').click(function() {
@@ -76,6 +76,9 @@ $(document).ready(function() {
                 var dayDescribeCode = data.current.condition.code;
                 var background = document.getElementById("pallette");
 
+                //Tests if the function was called
+                //console.log("determineBackground() was called");
+
                 console.log(dayDescribe);
                 console.log(dayDescribeCode);
 
@@ -91,10 +94,7 @@ $(document).ready(function() {
 
             forecastDays();
 
-            window.onload = function() {
-                console.log("called");
-                determineBackground();
-            }
+            determineBackground();
         });
     });
-});
+};
