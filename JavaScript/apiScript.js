@@ -77,7 +77,8 @@ window.onload = function() {
             function determineBackground() {
                 var dayDescribe = data.current.condition.text;
                 var dayDescribeCode = data.current.condition.code;
-                var bkg = $("#pallette");
+                var bigBack = $("#pallette");
+                var smallBack = $(".currentWeather");
 
                 //Tests if the function was called
                 console.log("determineBackground() was called");
@@ -86,9 +87,10 @@ window.onload = function() {
                 console.log(dayDescribeCode);
 
                 if (dayDescribeCode === 1003) {
-                    bkg.css('background-color', 'red');
+                    bigBack.css('background-color', 'red');
                 } else if (dayDescribeCode === 1000) {
-                    bkg.css('background-color', 'blue');
+                    bigBack.css({'background-image': 'url("assets/images/Sunny.jpg")', "background-size": "cover"});
+                    smallBack.css({'background-image': 'url("assets/images/Sunny.jpg")', "background-size": "cover"});
                 }
             };
 
