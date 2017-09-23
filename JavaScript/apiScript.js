@@ -103,7 +103,7 @@ window.onload = function() {
             };
 
             $('.place').html("<h1>" + name + " " + region + ", " + country + "</h1>");
-            $('.tempFahr').html("<h2>" + tempFahr + "(F) | " + tempCelc + "(C)</h2>");
+            $('.tempFahr').html("<h2>" + tempFahr + "&#8457; | " + tempCelc + "&#8451;</h2>");
             $('.text').html("<h3>" + weatherText + "</h3>");
             $('.wind').html("<h3>" + windMPH + "mph " + windDir + "<h3>");
 
