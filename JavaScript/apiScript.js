@@ -76,7 +76,7 @@ window.onload = function() {
 
             function determineBackground() {
                 var dayDescribe = data.current.condition.text;
-                var dayDescribeCode = data.current.condition.code;
+                var dayDescribeCode = data.current.condition.code; //data.current.condition.code
                 var bigBack = $("#pallette");
                 var smallBack = $(".currentWeather");
 
@@ -87,11 +87,19 @@ window.onload = function() {
                 console.log(dayDescribeCode);
 
                 if (dayDescribeCode === 1003) {
-                    bigBack.css('background-color', 'red');
+                    bigBack.css({'background-image': 'url("assets/images/Cloudy.jpg")', "background-size": "cover"});
+                    smallBack.css({'background-image': 'url("assets/images/Cloudy.jpg")', "background-size": "cover"});
+                    console.log("Cloudy");
                 } else if (dayDescribeCode === 1000) {
                     bigBack.css({'background-image': 'url("assets/images/Sunny.jpg")', "background-size": "cover"});
                     smallBack.css({'background-image': 'url("assets/images/Sunny.jpg")', "background-size": "cover"});
+                    console.log("Sunny");
+                } else if (dayDescribeCode === 1183 || dayDescribeCode === 1063) {
+                    bigBack.css({'background-image': 'url("assets/images/Rainy.jpg")', "background-size": "cover"});
+                    smallBack.css({'background-image': 'url("assets/images/Rainy.jpg")', "background-size": "cover"});
+                    console.log("Light Rain");
                 }
+
             };
 
             $('.place').html("<h1>" + name + " " + region + ", " + country + "</h1>");
