@@ -58,7 +58,7 @@ window.onload = function() {
 
                 //Loop through and insert future days of the week
                 $('.forecastDayNumber').each(function(i, el) {
-                    $(el).html(daysOfTheWeek [(dayID + i) % 7]);
+                    $(el).html(daysOfTheWeek[(dayID + i) % 7]);
                 });
 
                 //Loop through and insert Low - High temperature of the day
@@ -71,7 +71,6 @@ window.onload = function() {
                     $(this).attr('src', days[i].condition.icon);
                 });
 
-                determineBackground();
             };
 
             function determineBackground() {
@@ -102,12 +101,23 @@ window.onload = function() {
 
             };
 
+            function forecastHours() {
+                var hoursOfTheDay = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
+                var today = new Date();
+                var hour = today.getHours();
+
+                //Loop through hour elements and print out the future ones
+
+            };
+
             $('.place').html("<h1>" + name + " " + region + ", " + country + "</h1>");
             $('.tempFahr').html("<h2>" + tempFahr + "&#8457; | " + tempCelc + "&#8451;</h2>");
             $('.text').html("<h3>" + weatherText + "</h3>");
             $('.wind').html("<h3>" + windMPH + "mph " + windDir + "<h3>");
 
             forecastDays();
+            determineBackground();
+            forecastHours();
         });
     });
 };
