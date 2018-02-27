@@ -148,7 +148,6 @@ input {
 .weatherIcon {
     height: 100%;
     width: 25%;
-    background-color: red;
     display: inline-block;
     padding: 0px;
     margin: 0px;
@@ -162,7 +161,6 @@ input {
 .dayOfWeek {
     height: 100%;
     width: 50%;
-    background-color: orange;
     text-align: center;
     display: inline-block;
     padding: 0.1px;
@@ -174,7 +172,6 @@ input {
 .highsAndLows {
     height: 100%;
     width: 26%;
-    background-color: pink;
     text-align: center;
     display: inline-block;
     padding: 0px;
