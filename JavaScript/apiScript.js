@@ -9,7 +9,7 @@ window.onload = function() {
       console.log(zipCode);
     });
 
-    $.getJSON("http://api.apixu.com/v1/forecast.json?key=915de969c95b481981e233903172106&q=18976&days=5", function(i) {
+    $.getJSON("https://api.apixu.com/v1/forecast.json?key=915de969c95b481981e233903172106&q=18976&days=5", function(i) {
         var lat = i.location.lat;
         var lon = i .location.lon;
 
@@ -20,7 +20,7 @@ window.onload = function() {
         var fiveDays = "&q=" + zipCode + "&days=5";
         var api = apiLink + apiKeyNum + lat + ',' + lon + fiveDays;
 
-        $.getJSON("http://api.apixu.com/v1/forecast.json?key=915de969c95b481981e233903172106&q=18976&days=5", function(data) {
+        $.getJSON("https://api.apixu.com/v1/forecast.json?key=915de969c95b481981e233903172106&q=18976&days=5", function(data) {
             var name = data.location.name;
             var region = data.location.region;
             var country = data.location.country;
