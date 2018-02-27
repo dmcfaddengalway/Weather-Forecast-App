@@ -110,19 +110,28 @@ body {
 	font-style: italic;
 }
 
+.inputContainer {
+    margin: 7% 20%;
+}
+
 input {
     height: 48px;
-    width: 250px;
-    border: 2ps solid gray;
-    border-radius: 2px;
+    width: 500px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 5px 10px;
     font-size: 18px;
 }
 
 .submitButton {
     border: none;
-    width: 150px;
-    height: 36px;
-    background-color: red;
+    width: 200px;
+    height: 58px;
+    font-family: "OstrichSansMedium";
+    font-size: 36px;
+    background-color: rgb(105,166,249);
+    line-height: 1.75em;
     color: white;
+    border-radius: 5px;
 }
