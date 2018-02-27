@@ -62,9 +62,7 @@ body {
 }
 
 .forecastIcon {
-    width: 50%;
     margin: 0 auto;
-    display: block;
 }
 
 .forecastDayNumber {
@@ -75,7 +73,6 @@ body {
     display: inline-block;
     clear: both;
     text-align: center;
-    line-height: 50px;
 }
 
 .forecastDayHighsAndLows {
