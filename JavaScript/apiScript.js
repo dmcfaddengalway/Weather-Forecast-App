@@ -62,19 +62,19 @@ window.onload = function() {
                 var today = new Date();
                 var dayID = today.getDay();
 
+                //Loop through an insert weather icons
+                $('.forecastIcon').each(function(i) {
+                    $(this).attr('src', days[i].condition.icon);
+                });
+
                 //Loop through and insert future days of the week
-                $('.forecastDayNumber').each(function(i, el) {
+                $('.dayOfWeek').each(function(i, el) {
                     $(el).html(daysOfTheWeek[(dayID + i) % 7]);
                 });
 
                 //Loop through and insert Low - High temperature of the day
-                $('.forecastDayHighsAndLows').each(function(i) {
+                $('.highsAndLows').each(function(i) {
                    $(this).html(Math.round(minTempC[i]) + " - " + Math.round(maxTempC[i]));
-                });
-
-                //Loop through an insert weather icons
-                $('.forecastIcon').each(function(i) {
-                    $(this).attr('src', days[i].condition.icon);
                 });
 
             };

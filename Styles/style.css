@@ -62,7 +62,8 @@ body {
 }
 
 .forecastIcon {
-    margin: 0 auto;
+    margin: auto;
+    text-align: center;
 }
 
 .forecastDayNumber {
@@ -84,6 +85,7 @@ body {
     font-size: 24px;
     text-align: center;
     float: right;
+    line-height: 3.0em;
 }
 
 .place {
@@ -134,4 +136,51 @@ input {
     line-height: 1.75em;
     color: white;
     border-radius: 5px;
+}
+
+/*=========*/
+
+.dayForecast {
+    height: 20%;
+    width: 100%;
+}
+
+.weatherIcon {
+    height: 100%;
+    width: 25%;
+    background-color: red;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+
+.weatherIcon img {
+    margin-left: 18%;
+}
+
+.dayOfWeek {
+    height: 100%;
+    width: 50%;
+    background-color: orange;
+    text-align: center;
+    display: inline-block;
+    padding: 0.1px;
+    margin-left: -3px;
+    line-height: 1.25em;
+    font-size: 24px;
+}
+
+.highsAndLows {
+    height: 100%;
+    width: 26%;
+    background-color: pink;
+    text-align: center;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    margin-left: -2px;
+    float: right;
+    line-height: 1.25em;
+    font-size: 24px;
 }
