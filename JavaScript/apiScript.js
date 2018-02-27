@@ -1,21 +1,26 @@
 'use strict';
 
 window.onload = function() {
-    var apiKeyNum = "a79b350f005b4306b1313540170308&q=";
+    var apiKeyNum = "915de969c95b481981e233903172106";
+    var zipCode;
 
     $('button').click(function() {
-      var zipCode = $("#zipInput").val();
+      zipCode = $("#zipInput").val();
       console.log(zipCode);
     });
 
-    $.getJSON("http://ipinfo.io", function(i) {
-        var location = i.loc.split(",");
+    $.getJSON("http://api.apixu.com/v1/forecast.json?key=915de969c95b481981e233903172106&q=18976&days=5", function(i) {
+        var lat = i.location.lat;
+        var lon = i .location.lon;
+
+        console.log(lon);
+        console.log(lat);
 
         var apiLink = "http://api.apixu.com/v1/forecast.json?key=";
-        var fiveDays = "&days=5";
-        var api = apiLink + apiKeyNum + location[0] + ',' + location[1] + fiveDays;
+        var fiveDays = "&q=" + zipCode + "&days=5";
+        var api = apiLink + apiKeyNum + lat + ',' + lon + fiveDays;
 
-        $.getJSON(api, function(data) {
+        $.getJSON("http://api.apixu.com/v1/forecast.json?key=915de969c95b481981e233903172106&q=18976&days=5", function(data) {
             var name = data.location.name;
             var region = data.location.region;
             var country = data.location.country;
@@ -76,7 +81,7 @@ window.onload = function() {
             function determineBackground() {
                 var dayDescribe = data.current.condition.text;
                 var dayDescribeCode = data.current.condition.code; //data.current.condition.code
-                var bigBack = $("#pallette");
+                var bigBack = $("body");
                 var smallBack = $(".currentWeather");
 
                 //Tests if the function was called
