@@ -5,8 +5,12 @@ html, body {
 }
 
 body {
-  font-family: "OstrichSans";
-	background-color: black;
+    font-family: "OstrichSans";
+}
+
+#pallette {
+    width: 100bh;
+    height: 100vh;
 }
 
 .weatherContainer {
@@ -52,9 +56,9 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    display: block;
-    float: left;
+    display: inline;
     vertical-align: middle;
+    float: left;
 }
 
 .forecastIcon {
@@ -69,6 +73,7 @@ body {
     margin: 0px;
     padding: 0px;
     display: inline-block;
+    clear: both;
     text-align: center;
     line-height: 50px;
 }
@@ -79,10 +84,9 @@ body {
     margin: 0px;
     padding: 0px;
     display: inline-block;
-    float: right;
     font-size: 24px;
     text-align: center;
-    line-height: 50px;
+    float: right;
 }
 
 .place {
@@ -109,19 +113,28 @@ body {
 	font-style: italic;
 }
 
+.inputContainer {
+    margin: 7% 20%;
+}
+
 input {
     height: 48px;
-    width: 250px;
-    border: 2ps solid gray;
-    border-radius: 2px;
+    width: 500px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 5px 10px;
     font-size: 18px;
 }
 
 .submitButton {
     border: none;
-    width: 150px;
-    height: 36px;
-    background-color: red;
+    width: 200px;
+    height: 58px;
+    font-family: "OstrichSansMedium";
+    font-size: 36px;
+    background-color: rgb(105,166,249);
+    line-height: 1.75em;
     color: white;
+    border-radius: 5px;
 }
