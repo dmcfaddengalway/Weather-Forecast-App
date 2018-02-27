@@ -126,4 +126,4 @@ window.onload = function() {
             forecastHours();
         });
     });
-});
+};
