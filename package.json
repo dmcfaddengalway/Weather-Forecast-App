@@ -1,0 +1,23 @@
+{
+  "name": "Weather-Forecast-App",
+  "version": "1.0.0",
+  "description": "First use of an API Key from APIXU for weather data. Displays longititude in the console",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmcfaddengalway/Weather-Forecast-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmcfaddengalway/Weather-Forecast-App/issues"
+  },
+  "homepage": "https://github.com/dmcfaddengalway/Weather-Forecast-App#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

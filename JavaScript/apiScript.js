@@ -1,38 +1,39 @@
+require('dotenv').config();
 'use strict';
 
 window.onload = function() {
-    var apiKeyNum = "915de969c95b481981e233903172106";
-    var zipCode;
+    const apiKeyNum = process.env.API_KEY;
+    let apiURL = process.env.API_URL;
+    let zipCode;
 
     $('button').click(function() {
       zipCode = $("#zipInput").val();
       console.log(zipCode);
     });
 
-    $.getJSON("https://api.apixu.com/v1/forecast.json?key=915de969c95b481981e233903172106&q=18976&days=5", function(i) {
-        var lat = i.location.lat;
-        var lon = i .location.lon;
+    $.getJSON(apiURL, function(i) {
+        let lat = i.location.lat;
+        let lon = i.location.lon;
 
         console.log(lon);
         console.log(lat);
 
-        var apiLink = "http://api.apixu.com/v1/forecast.json?key=";
-        var fiveDays = "&q=" + zipCode + "&days=5";
-        var api = apiLink + apiKeyNum + lat + ',' + lon + fiveDays;
+        let fiveDays = "&q=" + zipCode + "&days=5";
+        let api = apiLink + apiKeyNum + lat + ',' + lon + fiveDays;
 
-        $.getJSON("https://api.apixu.com/v1/forecast.json?key=915de969c95b481981e233903172106&q=18976&days=5", function(data) {
-            var name = data.location.name;
-            var region = data.location.region;
-            var country = data.location.country;
-            var tempCelc = data.current.temp_c;
-            var tempFahr = data.current.temp_f;
-            var weatherText = data.current.condition.text;
-            var windMPH = data.current.wind_mph;
-            var windDir = data.current.wind_dir;
-            var weatherIconCode = data.current.condition.code;
+        $.getJSON(apiURL, function(data) {
+            let name = data.location.name;
+            let region = data.location.region;
+            let country = data.location.country;
+            let tempCelc = data.current.temp_c;
+            let tempFahr = data.current.temp_f;
+            let weatherText = data.current.condition.text;
+            let windMPH = data.current.wind_mph;
+            let windDir = data.current.wind_dir;
+            let weatherIconCode = data.current.condition.code;
 
-            var forecastDayData = data.forecast.forecastday;
-            var days = forecastDayData.map(function(x) {
+            let forecastDayData = data.forecast.forecastday;
+            let days = forecastDayData.map(function(x) {
                 return x.day;
             });
 
@@ -57,10 +58,10 @@ window.onload = function() {
 
             function forecastDays() {
 
-                var daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+                let daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
                                     'Friday', 'Saturday', 'Sunday'];
-                var today = new Date();
-                var dayID = today.getDay();
+                let today = new Date();
+                let dayID = today.getDay();
 
                 //Loop through and insert future days of the week
                 $('.forecastDayNumber').each(function(i, el) {
